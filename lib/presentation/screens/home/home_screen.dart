@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/config/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -39,12 +40,20 @@ class _CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    final colors = Theme.of(context).colorScheme;
+
+
     return ListTile(
-      title: Text('${appMenu.title}'),
-      subtitle: Text('${appMenu.subTitle}'),
+      leading: Icon(appMenu.icon, size: 30, color: colors.primary,),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      title: Text(appMenu.title),
+      subtitle: Text(appMenu.subTitle),
       trailing: Icon(Icons.arrow_forward_ios_outlined),
       onTap: () {
-        print('Navigate to ${appMenu.link}');
+        //print('Navigate to ${appMenu.link}');
+        //TODO: Navigate to another routes.
       },
     );
   }
