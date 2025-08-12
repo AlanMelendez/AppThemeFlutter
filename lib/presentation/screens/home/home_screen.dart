@@ -23,14 +23,29 @@ class _HomeView extends StatelessWidget {
     var appMenu = appMenuItems;
 
     return ListView.builder(
+      physics: BouncingScrollPhysics(),
       itemCount: appMenu.length,
-      itemBuilder: (context, index,) => ListTile(
-        title: Text('${appMenu[index].title}'),
-        trailing: Icon(Icons.arrow_forward_ios_outlined),
-        onTap: () {
-          print('Navigate to ${appMenu[index].link}');
-        },
-      ),
+      itemBuilder: (context, index,) => _CustomListTile(appMenu: appMenu[index]),
+    );
+  }
+}
+
+class _CustomListTile extends StatelessWidget {
+  const _CustomListTile({
+    required this.appMenu,
+  });
+
+  final MenuItems appMenu;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text('${appMenu.title}'),
+      subtitle: Text('${appMenu.subTitle}'),
+      trailing: Icon(Icons.arrow_forward_ios_outlined),
+      onTap: () {
+        print('Navigate to ${appMenu.link}');
+      },
     );
   }
 }
