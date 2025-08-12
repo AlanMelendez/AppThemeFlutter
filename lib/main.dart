@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: FilledButton(
-            child: const Text('Hello Flutter!'),
+            child: const Text('Hello Flutters!'),
             onPressed: () {
               // Action when button is pressed
             },
