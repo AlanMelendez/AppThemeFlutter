@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
-import 'package:widgets_app/config/theme/app_theme.dart';
-import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+
+  static const String name = 'home_screen'; // Property to set name in go router.
   const HomeScreen({super.key});
 
   @override
@@ -42,7 +42,6 @@ class _CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
 
     final colors = Theme.of(context).colorScheme;
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatelessWidget {
+
+  static const String name = 'buttons_screen'; // Property to set name in go router.
   const ButtonsScreen({super.key});
 
   @override
