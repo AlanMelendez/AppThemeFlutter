@@ -63,9 +63,35 @@ class _ButtonView extends StatelessWidget {
               backgroundColor: WidgetStatePropertyAll(colors.primary)
             ),),
 
+            CustomButton()
 
           ],
         )
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget{
+
+   CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        child: InkWell(
+          onTap: () => {},
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text('Custom press', style: TextStyle(color: Colors.white),),
+          ),
+        ),
       ),
     );
   }
