@@ -28,7 +28,6 @@ class _ProgressView extends StatelessWidget {
             strokeWidth: 2,
             backgroundColor: Colors.black12,
           ),
-
           SizedBox(height: 25),
           Text('Manage progress Indicator'),
           _ControllerProgressIndicator(),
