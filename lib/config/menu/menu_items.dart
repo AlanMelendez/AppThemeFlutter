@@ -47,4 +47,10 @@ const appMenuItems = <MenuItems>[
     link: '/animated',
     icon: Icons.check_box_outline_blank_outlined,
   ),
+     MenuItems(
+    title: 'Ui Controls Screen',
+    subTitle: 'Ui Controls + Tiles',
+    link: '/ui-controls',
+    icon: Icons.car_rental_outlined,
+  ),
 ];
